@@ -2,23 +2,29 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>dbank</title>
+    <meta name="viewport" content="width=device-width, initial-scale-1, shrink-to-fit=no" />
+    <title>DBank</title>
     <base href="/" />
-    <link rel="icon" href="favicon.ico" />
     <link type="text/css" rel="stylesheet" href="main.css" />
   </head>
   <body>
-    <main>
-      <img src="logo2.svg" alt="DFINITY logo" />
-      <br />
-      <br />
-      <form action="#">
-        <label for="name">Enter your name: &nbsp;</label>
-        <input id="name" alt="Name" type="text" />
-        <button type="submit">Click Me!</button>
+    <div class="container">
+      <img style="margin: 2em auto;" src="logo2.svg" alt="DBank logo" width="200"/>
+      <h1>Current Balance: $<span id="value">234</span></h1>
+      <div class="divider"></div>
+      <form id="deposit" action="#">
+        <h2>Amount to Top Up</h2>
+        <input id="input-amount" type="number" step="0.01" min=.01 name="topUp" value=""/>
+        <button id="submit-btn" type="submit">Add Funds</button>
       </form>
-      <section id="greeting"></section>
-    </main>
+      <div>
+        <h2>Amount to Withdraw</h2>
+        <input id="withdraw-amount" type="number" step="0.01" min=.01 name="withdraw" value=""/>
+        <button id="submit-btn-withdraw" type="submit">Withdraw Funds</button>
+      </div>
+      <div style="display: flex;justify-content: center;margin: 2em auto;">
+        <button id="compound-btn" type="submit">Compound</button>
+      </div>
+    </div>
   </body>
 </html>
